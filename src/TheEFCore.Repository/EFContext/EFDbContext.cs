@@ -16,7 +16,7 @@ namespace TheEFCore.Repository.EFContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.MapStudent();
-            modelBuilder.SeedStudent();
+            //modelBuilder.SeedStudent();
         }
 
         public DbSet<Grade> Grades { get; set; }

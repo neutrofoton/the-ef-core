@@ -42,6 +42,10 @@ $ dotnet-ef dbcontext scaffold "Server=SERVER;Port=5412;Database=DB_NAME;User Id
    $ dotnet ef migrations add InitialCreate --project TheEFCore.Repository --startup-project TheEFCore.PresentationApp
    ```
 
+   The command will generate migration code in TheEFCore.Repository/Migrations/
+   a. XXXXXXX_InitialCreate.cs
+   b. EFDbContextModelSnapshot.cs
+
 3. Change to start up project directory
    ```
    $ cd TheEFCore/TheEFCore.PresentationApp

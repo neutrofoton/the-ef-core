@@ -14,11 +14,13 @@ namespace TheEFCore.Repository.EFContext
                 .AddDbContext<EFDbContext>(options =>
                 {
                     //options.UseNpgsql(
-                    //    host.Configuration.GetConnectionString("TheEFCore"),
+                    //    host.Configuration.GetConnectionString("TheEFCorePostgres"),
                     //    builder => builder.MigrationsAssembly("TheEFCore.Migration"));
 
-                    options.UseNpgsql(
-                       host.Configuration.GetConnectionString("TheEFCore"));
+                    //options.UseNpgsql(
+                    //   host.Configuration.GetConnectionString("TheEFCorePostgres"));
+
+                    options.UseSqlServer(host.Configuration.GetConnectionString("TheEFCoreSqlServer"));
 
                 }, ServiceLifetime.Singleton);
         }
