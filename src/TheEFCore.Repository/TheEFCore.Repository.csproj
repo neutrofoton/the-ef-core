@@ -36,6 +36,7 @@
     <Folder Include="EFContext\" />
     <Folder Include="EFContext\Mapping\" />
     <Folder Include="EFContext\DataSeed\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TheEFCore.Domain\TheEFCore.Domain.csproj" />

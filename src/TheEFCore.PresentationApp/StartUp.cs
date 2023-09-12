@@ -17,7 +17,17 @@ namespace TheEFCore.PresentationApp
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Startup:ExecuteAsync");
+
+            var existance = this.context == null ? "NULL" : "EXIST";
+            Console.WriteLine($"EFDbContext is {existance}");
+
+
+            StudentOperation.CreateGrade(context);
+            StudentOperation.CreateStudentAndPassport(context);
+            StudentOperation.CreateCoursesAndApplyToStudent(context);
+
+            return Task.CompletedTask;
         }
     }
 }

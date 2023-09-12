@@ -16,7 +16,7 @@ namespace TheEFCore.Domain.Model
         public int? GradeId { get; set; }
         public Grade Grade { get; set; }
 
-        public Address Address { get; set; }
+        public Passport Passport { get; set; }
 
         public IList<StudentCourse> StudentCourses { get; set; }
     }

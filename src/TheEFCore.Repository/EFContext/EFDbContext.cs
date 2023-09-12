@@ -21,6 +21,6 @@ namespace TheEFCore.Repository.EFContext
 
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Student> Students { get; set; }
-        public DbSet<Address> StudentAddresses { get; set; }
+        public DbSet<Passport> Passports { get; set; }
     }
 }

@@ -16,18 +16,20 @@ namespace TheEFCore.Repository.EFContext.Mapping
                 //.OnDelete(DeleteBehavior.Cascade)
                 ;
 
-            //[One to One] Student - Address -> v1: Map from Student
+            //[One to One] Student - Passport -> v1: Map from Student
             modelBuilder.Entity<Student>()
-                .HasOne(s => s.Address)
-                .WithOne(ad => ad.Student)
-                .HasForeignKey<Address>(ad => ad.StudentId)
+                .HasOne(s => s.Passport)
+                .WithOne(p => p.Student)
+                .HasForeignKey<Passport>(p => p.StudentId)
+                .IsRequired()
                 ;
 
-            //[One to One] Student - StudentAddress -> v2: Map from StudentAddress
-            //modelBuilder.Entity<Address>()
-            //    .HasOne(ad => ad.Student)
-            //    .WithOne(s => s.Address)
-            //    .HasForeignKey<Address>(ad => ad.StudentId)
+            //[One to One] Student - Passport -> v2: Map from Passport
+            //modelBuilder.Entity<Passport>()
+            //    .HasOne(p => p.Student)
+            //    .WithOne(s => s.Passport)
+            //    .HasForeignKey<Passport>(p => p.StudentId)
+            //    .IsRequired()
             //    ;
 
             //[Many to Many] Student - Course via StudentCourse

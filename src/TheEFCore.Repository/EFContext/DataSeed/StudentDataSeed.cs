@@ -8,24 +8,21 @@ namespace TheEFCore.Repository.EFContext.DataSeed
     {
         public static void SeedStudent(this ModelBuilder modelBuilder)
         {
-            Address address = new Address()
+            Passport address = new Passport()
             {
                 Id = 101,
-                City = "jakarta",
-                Country = "indonesia",
-                ShortAddress = "jln. merdeka raya",
-                State = "indonesia",
-                StudentId=10
+                No = "ID-1001",
+                Nationality = "indonesian"
             };
 
-            modelBuilder.Entity<Address>()
+            modelBuilder.Entity<Passport>()
                 .HasData(address);
 
             modelBuilder.Entity<Student>()
                 .HasData(new Student()
                 {
                     Id=10,
-                    Address= address,
+                    Passport= address,
                     Grade = new Grade()
                     {
                         Name="Tingkat 1"

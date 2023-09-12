@@ -36,4 +36,9 @@
     <ProjectReference Include="..\TheEFCore.Repository\TheEFCore.Repository.csproj" />
     <ProjectReference Include="..\TheEFCore.Migration\TheEFCore.Migration.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
